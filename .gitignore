@@ -26,3 +26,5 @@ screenshots/
 Thumbs.db
 *.log
 .vscode/
+
+.vercel
