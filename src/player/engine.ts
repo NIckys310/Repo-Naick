@@ -186,9 +186,14 @@ export class YouTubeEngine implements PlaybackEngine {
 
   private applyVolume(): void {
     if (!this.ready || this.player === null) return;
+    // Con volumen 0 se silencia de verdad. Y unMute() va ANTES de setVolume(): si va después,
+    // YouTube restaura su volumen anterior y el deslizador parece no hacer nada.
+    if (this.muted || this.volume === 0) {
+      this.player.mute();
+      return;
+    }
+    this.player.unMute();
     this.player.setVolume(this.volume);
-    if (this.muted) this.player.mute();
-    else this.player.unMute();
   }
 
   load(song: Song, autoplay: boolean): void {

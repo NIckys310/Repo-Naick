@@ -2,6 +2,8 @@
 
 Reproductor de música web cuya lista de reproducción es una **lista doblemente enlazada implementada a mano** en TypeScript. Taller de la materia *Estructuras de Datos*.
 
+**Demo en vivo: https://repo-naick.vercel.app**
+
 Las canciones suenan completas con el reproductor oficial de YouTube incrustado. La interfaz muestra por dentro la estructura: nodos, punteros `prev` y `next`, `head`, `tail` y `current`.
 
 ![Vista de escritorio en modo claro](docs/capturas/escritorio-claro.png)
@@ -153,7 +155,7 @@ npm install
 npm run dev
 ```
 
-Abre http://localhost:5173.
+En local se abre en `http://localhost:5173`. La versión publicada está en https://repo-naick.vercel.app.
 
 ### Clave de YouTube (opcional pero recomendada)
 
